@@ -12,6 +12,8 @@ class ToDoList(models.Model):
     def __str__(self):
         return str(self.title)
 
+    # def get_absolute_url(self):
+
 class ToDoItem(models.Model):
     title = models.CharField(max_length=150)
     description = models.TextField(null=True, blank=True)
@@ -21,3 +23,5 @@ class ToDoItem(models.Model):
 
     def __str__(self):
         return f"{self.title}: due {self.due_date}"
+
+    # def get_absolute_url(self):
