@@ -7,13 +7,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!--Simple.css-->
     <link rel="stylesheet" href="https://cdn.simplecss.org/simple.min.css">
-    <title>Django To-do Lists</title>
+    <title href="{% url 'home' %}">Django To-do Lists</title>
 </head>
 
 <body>
     <div>
-        <h1 href="{% url 'home' %}">
-            Django To-do Lists
+        <h1>
+            <a href="{% url 'home' %}">Django To-do Lists</a>
         </h1>
     </div>
     <div>

@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+{% block content %}
+
+<h3>Delete list</h3>
+<div>
+    <div>
+        <form method="POST">
+            {% csrf_token %}
+            <input value="Delete" type="submit">
+            <input value="Cancel" type="button" onclick="location.href='{% url 'home' %}';">
+        </form>
+    </div>
+</div>
+
+{% endblock %}
