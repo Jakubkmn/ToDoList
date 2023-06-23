@@ -13,5 +13,11 @@
     <h4>you have no lists!</h4>
     {% endfor %}
 </ul>
+<p>
+    <input
+        value="Add a new list"
+        type="button"
+        href="{% url 'list-add' %}"/>
+</p>
 
 {% endblock %}
