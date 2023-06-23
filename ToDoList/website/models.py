@@ -12,7 +12,8 @@ class ToDoList(models.Model):
     def __str__(self):
         return str(self.title)
 
-    # def get_absolute_url(self):
+    def get_absolute_url(self):
+        return reverse("list", args=[self.id])
 
 class ToDoItem(models.Model):
     title = models.CharField(max_length=150)
@@ -24,4 +25,10 @@ class ToDoItem(models.Model):
     def __str__(self):
         return f"{self.title}: due {self.due_date}"
 
-    # def get_absolute_url(self):
+    def get_absolute_url(self):
+        return reverse(
+            "item-update", args=[str(self.todo_list.id), str(self.id)]
+        )
+    
+    class Meta:
+        ordering = ["due_date"]
